@@ -1,0 +1,26 @@
+server:
+  port: 8031
+
+euraka:
+  instance:
+    leaseRenewIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 5
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+
+spring:
+  application:
+    name: hereyouare-service
+
+#management:
+#  security:
+#    enabled: false
+
+logging:
+  level:
+    org.toughchow.hereyouare.web.entity.user: DEBUG
